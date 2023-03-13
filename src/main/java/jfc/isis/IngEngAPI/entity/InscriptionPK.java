@@ -1,4 +1,4 @@
-package entity;
+package jfc.isis.IngEngAPI.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
@@ -7,15 +7,15 @@ import jakarta.persistence.Id;
 
 import java.io.Serializable;
 
-public class ChoisitPK implements Serializable {
+public class InscriptionPK implements Serializable {
     @Column(name = "id_etud")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String idEtud;
-    @Column(name = "id_ue")
+    @Column(name = "nom_promo")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String idUe;
+    private String nomPromo;
 
     public String getIdEtud() {
         return idEtud;
@@ -25,12 +25,12 @@ public class ChoisitPK implements Serializable {
         this.idEtud = idEtud;
     }
 
-    public String getIdUe() {
-        return idUe;
+    public String getNomPromo() {
+        return nomPromo;
     }
 
-    public void setIdUe(String idUe) {
-        this.idUe = idUe;
+    public void setNomPromo(String nomPromo) {
+        this.nomPromo = nomPromo;
     }
 
     @Override
@@ -38,10 +38,10 @@ public class ChoisitPK implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ChoisitPK choisitPK = (ChoisitPK) o;
+        InscriptionPK that = (InscriptionPK) o;
 
-        if (idEtud != null ? !idEtud.equals(choisitPK.idEtud) : choisitPK.idEtud != null) return false;
-        if (idUe != null ? !idUe.equals(choisitPK.idUe) : choisitPK.idUe != null) return false;
+        if (idEtud != null ? !idEtud.equals(that.idEtud) : that.idEtud != null) return false;
+        if (nomPromo != null ? !nomPromo.equals(that.nomPromo) : that.nomPromo != null) return false;
 
         return true;
     }
@@ -49,7 +49,7 @@ public class ChoisitPK implements Serializable {
     @Override
     public int hashCode() {
         int result = idEtud != null ? idEtud.hashCode() : 0;
-        result = 31 * result + (idUe != null ? idUe.hashCode() : 0);
+        result = 31 * result + (nomPromo != null ? nomPromo.hashCode() : 0);
         return result;
     }
 }

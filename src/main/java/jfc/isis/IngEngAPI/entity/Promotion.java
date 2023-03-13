@@ -1,4 +1,4 @@
-package entity;
+package jfc.isis.IngEngAPI.entity;
 
 import jakarta.persistence.*;
 
