@@ -12,7 +12,7 @@ import java.sql.Date;
 @Setter
 @NoArgsConstructor
 
-public class Effectue {
+public class Realisation {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Date dateact;
@@ -21,4 +21,13 @@ public class Effectue {
     private String nomreferents;
     private Boolean validation;
     private String commentaireref;
+
+    @ManyToOne
+    private Activite activite;
+
+    @ManyToOne
+    private Semestre semestre;
+
+    @ManyToOne
+    private Etudiant etudiant;
 }

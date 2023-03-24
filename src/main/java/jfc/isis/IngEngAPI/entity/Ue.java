@@ -22,4 +22,13 @@ public class Ue {
     @Basic
     @Column(name = "description")
     private String description;
+
+    @ManyToOne
+    private Semestre semestre;
+
+    @ManyToOne
+    private Promotion promotion;
+
+    @OneToOne
+    private ChoixUE choix;
 }

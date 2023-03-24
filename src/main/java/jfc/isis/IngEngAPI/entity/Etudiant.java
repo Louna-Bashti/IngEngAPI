@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -18,4 +21,15 @@ public class Etudiant {
     private String prenom;
     private String identifiant;
     private String mdp;
+
+    @OneToMany
+    List<Realisation> realisationListe = new ArrayList<>();
+
+    @OneToMany
+    List<Inscription> inscriptionListe = new ArrayList<>();
+
+    @OneToMany
+    List<ChoixUE> choixUEListe = new ArrayList<>();
+
+
 }

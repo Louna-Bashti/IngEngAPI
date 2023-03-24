@@ -18,4 +18,10 @@ public class Inscription {
     private String anneescolaire;
     private Date dateinscription;
 
+    @ManyToOne
+    private Etudiant etudiant;
+
+    @ManyToOne
+    private Promotion promotion;
+
 }

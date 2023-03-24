@@ -19,6 +19,6 @@ public class Personnel {
     private String role;
 
     @ManyToMany
-    List<Activite> activites = new ArrayList<>();
+    List<Activite> affectations = new ArrayList<>();
 
 }

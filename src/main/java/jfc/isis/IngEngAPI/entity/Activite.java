@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,16 @@ public class Activite {
     private String nom;
     private String description;
     private String nbpoints;
+    private LocalDate dateValidation;
+    private boolean validation;
+    private String commentaire;
+
+    @ManyToMany(mappedBy = "affectations")
+    List<Personnel> personnels = new ArrayList<>();
+
+    @ManyToOne
+    private TypeActivite type;
 
     @ManyToMany(mappedBy = "activites")
-    List<Personnel> personnels = new ArrayList<>();
+    List<Promotion> promotions = new ArrayList<>();
 }
