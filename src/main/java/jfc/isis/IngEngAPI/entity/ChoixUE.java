@@ -18,7 +18,7 @@ public class ChoixUE {
     private Integer id;
     private Date datechoix;
 
-    @OneToOne
+    @ManyToOne
     private Ue ue;
 
     @ManyToOne

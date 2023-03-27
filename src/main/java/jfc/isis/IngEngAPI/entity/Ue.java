@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -29,6 +32,6 @@ public class Ue {
     @ManyToOne
     private Promotion promotion;
 
-    @OneToOne
-    private ChoixUE choix;
+    @OneToMany
+    List<ChoixUE> choixUEList = new ArrayList<>();
 }
