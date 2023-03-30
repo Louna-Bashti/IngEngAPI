@@ -16,7 +16,7 @@ import java.util.List;
 public class Promotion {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer nom;
+    private String nom;
 
     @ManyToMany
     List<Activite> activites = new ArrayList<>();

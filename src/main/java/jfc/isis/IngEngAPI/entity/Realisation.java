@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -18,9 +20,9 @@ public class Realisation {
     private Date dateact;
 
     private String description;
-    private String nomreferents;
     private Boolean validation;
     private String commentaireref;
+    private Integer nbpointsfin;
 
     @ManyToOne
     private Activite activite;
@@ -30,4 +32,7 @@ public class Realisation {
 
     @ManyToOne
     private Etudiant etudiant;
+
+    @ManyToMany (mappedBy = "realisations")
+    List<Personnel> referents = new ArrayList<>();
 }

@@ -17,9 +17,7 @@ public class Ue {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Basic
-    @Column(name = "id_semestre")
-    private String idSemestre;
+
     @Basic
     private String intitule;
     @Basic

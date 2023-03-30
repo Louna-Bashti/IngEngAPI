@@ -21,4 +21,7 @@ public class Personnel {
     @ManyToMany
     List<Activite> affectations = new ArrayList<>();
 
+    @ManyToMany
+    List<Realisation> realisations = new ArrayList<>();
+
 }

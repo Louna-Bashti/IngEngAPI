@@ -16,8 +16,6 @@ import java.util.List;
 public class Activite {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    private String idType;
     private String nom;
     private String description;
     private String nbpoints;
